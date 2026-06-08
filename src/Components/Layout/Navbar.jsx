@@ -75,7 +75,8 @@ const Navbar = () => {
                                 className={`px-3 py-1.5 rounded-xl flex items-center justify-center transition-all duration-300 ${isActive ? 'bg-transparent' : 'bg-black/20 backdrop-blur-sm shadow-sm'
                                     }`}
                             >
-                                {/* Changed the drop-shadow color to black (0,0,0) */}
+
+                                {/* Changed the drop-shadow  color to black (0,0,0) */}
                                 <img
                                     src={logo}
                                     alt="Logo"
