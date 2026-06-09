@@ -11,11 +11,11 @@ const footerData = {
         { name: "Contact us", url: "#" }
     ],
     services: [
-        "Hydrogen Division",
-        "CNG & LNG Division",
-        "EV Division",
-        "Civil & Concrete",
-        "Electrical"
+        { label: "Hydrogen Division", id: "hydrogen" },
+        { label: "CNG & LNG Division", id: "cng" },
+        { label: "EV Division", id: "ev-charging" },
+        { label: "Civil & Concrete", id: "civil" },
+        { label: "Electrical", id: "electrical" }
     ],
     // The year will now automatically update based on the user's system clock!
     copyright: `© Copyright ${new Date().getFullYear()} by Genesis Contracting Inc. Based in Ohio, USA`
@@ -69,6 +69,7 @@ const Footer = () => {
                     </div>
 
                     {/* Column 3: Services */}
+                    {/* Column 3: Services */}
                     <div className="flex flex-col">
                         <h3 className="text-white text-[22px] font-bold mb-6">Services</h3>
                         <ul className="flex flex-col gap-4">
@@ -77,9 +78,13 @@ const Footer = () => {
                                     <svg className="w-4 h-4 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                                     </svg>
-                                    <span className="text-[15px] hover:text-white transition-colors cursor-pointer">
-                                        {service}
-                                    </span>
+                                    {/* Clean, professional link construction */}
+                                    <a
+                                        href={`/genesis-ui-2/services#${service.id}`}
+                                        className="text-[15px] hover:text-white transition-colors cursor-pointer"
+                                    >
+                                        {service.label}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
