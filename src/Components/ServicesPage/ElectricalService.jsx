@@ -86,7 +86,7 @@ const ElectricalService = () => {
                     </div>
 
                     {/* RIGHT COLUMN: Tabbed Content (Top on mobile, Right on desktop) */}
-                    <div className="lg:col-span-6 flex flex-col pt-2 lg:pt-4 order-2 lg:order-1">
+                    <div className="lg:col-span-6 flex flex-col pt-2 lg:pt-4 ">
 
                         {/* Overline Text */}
                         <span className="text-[13px] text-gray-500 tracking-[0.15em] uppercase mb-3 font-semibold">
