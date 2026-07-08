@@ -36,7 +36,7 @@ const Navbar = () => {
             link: '/genesis-ui-2/services',
         },
         { name: 'About', link: '/genesis-ui-2/about' },
-        { name: 'Contact', link: '/genesis-ui-2/#contact' }
+        { name: 'Contact', link: '/genesis-ui-2/contact' }
     ];
 
     const toggleMobileDropdown = (name) => {

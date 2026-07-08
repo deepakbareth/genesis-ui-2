@@ -7,8 +7,8 @@ const footerData = {
         phone: "(419) 466-3262"
     },
     companyLinks: [
-        { name: "About us", url: "#" },
-        { name: "Contact us", url: "#" }
+        { name: "About us", url: "/genesis-ui-2/about" },
+        { name: "Contact us", url: "/genesis-ui-2/contact" }
     ],
     services: [
         { label: "Hydrogen Division", id: "hydrogen" },
@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
 
                 {/* 4-Column Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 mb-16">
 
                     {/* Column 1: Contact */}
                     <div className="flex flex-col">
@@ -72,7 +72,7 @@ const Footer = () => {
                     {/* Column 3: Services */}
                     <div className="flex flex-col">
                         <h3 className="text-white text-[22px] font-bold mb-6">Services</h3>
-                        <ul className="flex flex-col gap-4">
+                        <ul className="grid grid-cols-2 gap-4">
                             {footerData.services.map((service, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <svg className="w-4 h-4 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -90,11 +90,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 4: Latest News (Empty below header as per screenshot) */}
-                    <div className="flex flex-col">
-                        <h3 className="text-white text-[22px] font-bold mb-6">Latest News</h3>
-                        {/* Content area left empty to match design */}
-                    </div>
+
 
                 </div>
 

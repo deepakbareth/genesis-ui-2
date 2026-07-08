@@ -16,8 +16,8 @@ const AboutCTA = () => {
 
                     {/* Right CTA Button */}
                     <div className="shrink-0">
-                        <a
-                            href="/genesis-ui-2/#contact"
+                        <a 
+                            href="/genesis-ui-2/contact" 
                             className="inline-flex items-center gap-3 bg-[#1A2230] hover:bg-[#141A25] text-white px-8 py-4 rounded-sm font-semibold transition-colors duration-300 shadow-md font-['Necto_Mono',ui-monospace]"
                         >
                             <span>—</span>
