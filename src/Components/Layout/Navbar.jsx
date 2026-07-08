@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from "../../assets/genesisLogo.png";
 
 const Navbar = () => {
@@ -81,21 +82,27 @@ const Navbar = () => {
                             <div className="hidden lg:flex items-center space-x-2 h-full">
                                 {navItems.map((item) => (
                                     <div key={item.name} className="relative flex items-center h-full group cursor-pointer">
-                                        <div className="flex items-center gap-1.5 px-6 py-2.5 rounded-full transition-all duration-300 group-hover:bg-[#E2231A]">
-                                            <a
-                                                href={item.link}
-                                                className={`text-[15px] md:text-[18px]  transition-colors duration-300 group-hover:text-white ${isActive ? 'text-gray-900' : 'text-white'
-                                                    }`}
-                                            >
+                                        <NavLink
+                                            to={item.link}
+                                            end
+                                            className={({ isActive: isLinkActive }) => 
+                                                `flex items-center gap-1.5 px-6 py-2.5 rounded-full transition-all duration-300 ${
+                                                    isLinkActive 
+                                                        ? 'bg-[#E2231A] text-white' 
+                                                        : `${isActive ? 'text-gray-900' : 'text-white'} hover:bg-[#E2231A] hover:text-white`
+                                                }`
+                                            }
+                                        >
+                                            <span className="text-[15px] md:text-[18px] transition-colors duration-300">
                                                 {item.name}
-                                            </a>
+                                            </span>
 
                                             {item.dropdown && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className={`w-4 h-4 mt-0.5 transition-all duration-300 group-hover:-rotate-180 group-hover:text-white ${isActive ? 'text-gray-900' : 'text-white'}`}>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4 mt-0.5 transition-all duration-300 group-hover:-rotate-180">
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                                 </svg>
                                             )}
-                                        </div>
+                                        </NavLink>
 
                                         {item.dropdown && (
                                             <div className="absolute top-[80px] left-0 w-64 bg-white rounded-[16px] shadow-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col z-50 border border-gray-100">
@@ -194,13 +201,18 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             ) : (
-                                <a
-                                    href={item.link}
+                                <NavLink
+                                    to={item.link}
+                                    end
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block py-5 text-[22px] font-bold text-[#111827] hover:text-[#E2231A] transition-colors"
+                                    className={({ isActive: isLinkActive }) => 
+                                        `block py-5 text-[22px] font-bold transition-colors ${
+                                            isLinkActive ? 'text-[#E2231A]' : 'text-[#111827] hover:text-[#E2231A]'
+                                        }`
+                                    }
                                 >
                                     {item.name}
-                                </a>
+                                </NavLink>
                             )}
                         </div>
                     ))}

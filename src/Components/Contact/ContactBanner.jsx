@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImg from '../../assets/Home/Gallery/g3.jpg'; // Team standing on site image
+import bannerImg from '../../assets/Home/Gallery/g1.jpg'; // Team standing on site image
 
 const ContactBanner = () => {
     return (
