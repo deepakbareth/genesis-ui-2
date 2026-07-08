@@ -44,6 +44,9 @@ function Services() {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
             }
+        } else {
+            // If no hash is present, scroll to the top of the page
+            window.scrollTo(0, 0);
         }
     }, [location]);
     return (
