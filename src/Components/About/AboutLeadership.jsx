@@ -34,13 +34,13 @@ const AboutLeadership = () => {
                 
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <span className="text-[13px] text-gray-500 tracking-[0.15em] uppercase mb-3 font-semibold block font-['Necto_Mono',ui-monospace]">
+                    <span className="text-[13px] text-gray-500 tracking-[0.15em] uppercase mb-3 font-semibold block">
                         Our Executive Team
                     </span>
-                    <h2 className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji','Segoe_UI_Symbol','Noto_Color_Emoji'] text-[36px] md:text-[52px] font-normal text-[#2A3A4A] leading-tight tracking-tight">
+                    <h2 className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji','Segoe_UI_Symbol','Noto_Color_Emoji'] text-[36px] md:text-[48px] font-normal text-red-700 leading-tight tracking-tight">
                         Meet the leadership
                     </h2>
-                    <div className="w-10 h-1.5 bg-[#DA291C] mx-auto mt-6"></div>
+                    <div className="w-10 h-1.5 bg-red-700 mx-auto mt-6"></div>
                 </div>
 
                 {/* Grid */}

@@ -10,13 +10,13 @@ const AboutHistory = () => {
                 
                 {/* Section Header */}
                 <div className="mb-12">
-                    <span className="text-[13px] text-gray-500 tracking-[0.15em] uppercase mb-3 font-semibold block font-['Necto_Mono',ui-monospace]">
+                    <span className="text-[13px] text-gray-500 tracking-[0.15em] uppercase mb-3 font-semibold block">
                         Chronology & Milestones
                     </span>
-                    <h2 className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji','Segoe_UI_Symbol','Noto_Color_Emoji'] text-[36px] md:text-[52px] font-normal text-[#2A3A4A] leading-[1.15] tracking-tight">
+                    <h2 className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji','Segoe_UI_Symbol','Noto_Color_Emoji'] text-[36px] md:text-[48px] font-normal text-red-700 leading-[1.1] tracking-tight">
                         Brief History of Genesis Contracting Inc
                     </h2>
-                    <div className="w-10 h-1.5 bg-[#DA291C] mt-6"></div>
+                    <div className="w-10 h-1.5 bg-red-700 mt-6"></div>
                 </div>
 
                 {/* Editorial Two-Column Text Grid */}
