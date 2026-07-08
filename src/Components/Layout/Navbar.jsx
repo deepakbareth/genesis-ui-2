@@ -33,19 +33,10 @@ const Navbar = () => {
         { name: 'Home', link: '/genesis-ui-2/' },
         {
             name: 'Services',
-            link: 'services',
-            // dropdown: [
-            //     'Hydrogen',
-            //     'EV-Charging',
-            //     'CNG',
-            //     'Civil',
-            //     'Electrical',
-            //     'Maintenance',
-            //     'Upgrades',
-            // ]
+            link: '/genesis-ui-2/services',
         },
-        { name: 'About', link: '#about' },
-        { name: 'Contact', link: '#contact' }
+        { name: 'About', link: '/genesis-ui-2/about' },
+        { name: 'Contact', link: '/genesis-ui-2/#contact' }
     ];
 
     const toggleMobileDropdown = (name) => {
