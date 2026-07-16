@@ -30,19 +30,19 @@ const AboutStats = () => {
             <div className="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(#cbd5e1_1.5px,transparent_1.5px)] bg-[size:30px_30px]"></div>
 
             <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
                     {statsData.map((stat, idx) => (
                         <div key={idx} className="flex flex-col">
                             {/* Number & Title Area */}
-                            <div className="flex items-center mb-5">
+                            <div className="flex flex-wrap sm:flex-nowrap items-center mb-5 gap-y-2">
                                 {/* Big Number */}
-                                <span className="text-[56px] lg:text-[72px] font-bold text-[#DA291C] leading-none mr-4 shrink-0">
+                                <span className="text-[48px] sm:text-[56px] md:text-[44px] lg:text-[48px] xl:text-[64px] 2xl:text-[72px] font-bold text-[#DA291C] leading-none mr-3 sm:mr-4 shrink-0">
                                     {stat.number}
                                 </span>
 
                                 {/* Text next to the number */}
-                                <h3 className="text-[24px] lg:text-[25px] text-[#2A3A4A] font-light leading-[1.2]">
-                                    <span className="text-[24px] font-semibold lg:text-[28px]">{stat.top}</span>
+                                <h3 className="text-[20px] sm:text-[24px] md:text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[25px] text-[#2A3A4A] font-light leading-[1.2]">
+                                    <span className="text-[20px] sm:text-[24px] md:text-[18px] lg:text-[20px] xl:text-[26px] 2xl:text-[28px] font-semibold">{stat.top}</span>
                                     {stat.bottom && <><br /><span>{stat.bottom}</span></>}
                                 </h3>
                             </div>
