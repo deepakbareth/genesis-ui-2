@@ -4,14 +4,14 @@ import bannerImg from '../../assets/Home/Gallery/g1.jpg';
 
 function ServicesBanner() {
     return (
-        <PageBanner 
+        <PageBanner
             bgImage={bannerImg}
             title="Services"
             subtitle="Delivering innovative alternative fuel solutions, electrical services, civil construction, and infrastructure development."
             navLinks={[
-                { name: "Hydrogen", link: "#hydrogen" },
-                { name: "EV Charging", link: "#ev-charging" },
-                { name: "CNG", link: "#cng" },
+                { name: "Hydrogen", link: "/genesis-ui-2/services/hydrogen" },
+                { name: "EV Charging", link: "/genesis-ui-2/services/ev" },
+                { name: "CNG", link: "/genesis-ui-2/services/cng" },
                 { name: "Civil", link: "#civil" },
                 { name: "Electrical", link: "#electrical" },
                 { name: "Maintenance", link: "#maintenance" },
