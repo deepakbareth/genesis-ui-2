@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PageBanner = ({ bgImage, title, subtitle, breadcrumbs, navLinks }) => {
+const PageBanner = ({ bgImage, title, subtitle, breadcrumbs, navLinks, children }) => {
     return (
         <section
             className="relative h-[480px] md:h-screen bg-cover bg-center flex items-center w-full"
@@ -59,6 +59,8 @@ const PageBanner = ({ bgImage, title, subtitle, breadcrumbs, navLinks }) => {
                 >
                     {subtitle}
                 </p>
+
+                {children}
             </div>
         </section>
     );
