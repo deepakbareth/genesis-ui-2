@@ -8,7 +8,7 @@ import Matrix from '../Components/reusavleComp/Matrix';
 import WhyGenesis from '../Components/reusavleComp/WhyGenesis';
 import CTASection from '../Components/reusavleComp/CTASection';
 
-import hydrogenImg from '../assets/Servicesimg/hydrogen.jpg';
+import hydrogenImg from '../assets/Hydrogen/hydrogen.jpg';
 
 // 1. Three-Grid Capabilities Data
 const hydrogenCardsData = [
@@ -139,46 +139,41 @@ const HydrogenPage = () => {
                 ]}
             >
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-5 mt-10">
-                    <a 
-                        href="tel:4194663262" 
+                    <a
+                        href="tel:4194663262"
                         className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-sm font-semibold tracking-wider font-['Necto_Mono',monospace] uppercase text-center flex items-center justify-center gap-3 shadow-lg transition-colors"
                     >
                         <Phone className="w-5 h-5" />
                         <span>Get a Consultation</span>
                     </a>
-                    <a
-                        href="tel:4194663262"
-                        className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-sm font-semibold tracking-wider font-['Necto_Mono',monospace] uppercase text-center flex items-center justify-center gap-3 shadow-lg transition-colors"
-                    >
-                        Call us: (419) 466-3262
-                    </a>
+
                 </div>
             </PageBanner>
 
-            <ThreeGrid 
-                subtitle="Services Overview" 
-                title="Hydrogen Station Infrastructure Capabilities" 
-                cardsData={hydrogenCardsData} 
+            <ThreeGrid
+                subtitle="Services Overview"
+                title="Hydrogen Station Infrastructure Capabilities"
+                cardsData={hydrogenCardsData}
             />
-            
-            <Foldable 
-                subtitle="Deep Dive" 
-                title="Description of Services" 
-                servicesData={hydrogenServicesData} 
+
+            <Foldable
+                subtitle="Deep Dive"
+                title="Description of Services"
+                servicesData={hydrogenServicesData}
             />
-            
-            <Safety 
-                subtitle="Rigorous Safety" 
-                title="Compliance & Safety Standards" 
-                safetySlides={hydrogenSafetySlides} 
+
+            <Safety
+                subtitle="Rigorous Safety"
+                title="Compliance & Safety Standards"
+                safetySlides={hydrogenSafetySlides}
             />
-            
-            <Matrix 
-                subtitle="Target Sectors" 
-                title="Industry Matrix" 
-                industries={hydrogenIndustries} 
+
+            <Matrix
+                subtitle="Target Sectors"
+                title="Industry Matrix"
+                industries={hydrogenIndustries}
             />
-            
+
             <WhyGenesis />
             <CTASection />
         </div>
