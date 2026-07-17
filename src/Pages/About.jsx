@@ -6,7 +6,6 @@ import AboutHistory from '../Components/About/AboutHistory';
 import AboutLeadership from '../Components/About/AboutLeadership';
 import AboutTestimonials from '../Components/About/AboutTestimonials';
 import AboutCTA from '../Components/About/AboutCTA';
-
 function About() {
     // Scroll to top of the page when navigating to About Us
     useEffect(() => {
@@ -22,6 +21,8 @@ function About() {
             <AboutLeadership />
             <AboutTestimonials />
             <AboutCTA />
+           
+
         </div>
     );
 }
