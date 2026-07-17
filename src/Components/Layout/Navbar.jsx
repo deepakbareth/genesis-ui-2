@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import logo from "../../assets/genesisLogo.png";
 
 const Navbar = () => {
+    const location = useLocation();
     const [isHovered, setIsHovered] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -89,33 +90,46 @@ const Navbar = () => {
                             <div className="hidden xl:flex items-center space-x-2 h-full">
                                 {navItems.map((item) => (
                                     <div key={item.name} className="relative flex items-center h-full group cursor-pointer">
-                                        <NavLink
-                                            to={item.link}
-                                            end
-                                            className={({ isActive: isLinkActive }) =>
-                                                `flex items-center gap-1.5 px-6 py-2.5 rounded-full transition-all duration-300 ${isLinkActive
-                                                    ? 'bg-[#E2231A] text-white'
-                                                    : `${isActive ? 'text-gray-900' : 'text-white'} hover:bg-[#E2231A] hover:text-white`
-                                                }`
-                                            }
-                                        >
-                                            <span className="text-[15px] md:text-[18px] transition-colors duration-300">
-                                                {item.name}
-                                            </span>
+                                        {(() => {
+                                            const isLinkActive = item.name === 'Services'
+                                                ? location.pathname.includes('/services')
+                                                : location.pathname === item.link;
+                                            return (
+                                                <NavLink
+                                                    to={item.link}
+                                                    className={`flex items-center gap-1.5 px-6 py-2.5 rounded-full transition-all duration-300 ${isLinkActive
+                                                        ? 'bg-[#E2231A] text-white'
+                                                        : `${isActive ? 'text-gray-900' : 'text-white'} hover:bg-[#E2231A] hover:text-white`
+                                                        }`}
+                                                >
+                                                    <span className="text-[15px] md:text-[18px] transition-colors duration-300">
+                                                        {item.name}
+                                                    </span>
 
-                                            {item.dropdown && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4 mt-0.5 transition-all duration-300 group-hover:-rotate-180">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                                </svg>
-                                            )}
-                                        </NavLink>
+                                                    {item.dropdown && (
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4 mt-0.5 transition-all duration-300 group-hover:-rotate-180">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                                        </svg>
+                                                    )}
+                                                </NavLink>
+                                            );
+                                        })()}
 
                                         {item.dropdown && (
                                             <div className="absolute top-[80px] left-0 w-64 bg-white rounded-[16px] shadow-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col z-50 border border-gray-100">
                                                 {item.dropdown.map((subItem) => (
-                                                    <a key={subItem.name} href={subItem.link} className="px-6 py-3 text-[16px] font-bold text-[#2A3A4A] hover:text-[#E2231A] hover:bg-red-50/50 transition-colors duration-200">
+                                                    <NavLink
+                                                        key={subItem.name}
+                                                        to={subItem.link}
+                                                        className={({ isActive: isSubActive }) =>
+                                                            `px-6 py-3 text-[16px] font-bold transition-colors duration-200 ${isSubActive
+                                                                ? 'text-[#2A3A4A] bg-red-50/30'
+                                                                : 'text-[#2A3A4A] hover:text-[#E2231A] hover:bg-red-50/50'
+                                                            }`
+                                                        }
+                                                    >
                                                         {subItem.name}
-                                                    </a>
+                                                    </NavLink>
                                                 ))}
                                             </div>
                                         )}
@@ -182,7 +196,8 @@ const Navbar = () => {
                                 <div>
                                     <button
                                         onClick={() => toggleMobileDropdown(item.name)}
-                                        className="w-full flex items-center justify-between py-5 text-[22px] font-bold text-[#111827]"
+                                        className={`w-full flex items-center justify-between py-5 text-[22px] font-bold transition-colors ${location.pathname.includes('/services') ? 'text-[#E2231A]' : 'text-[#111827]'
+                                            }`}
                                     >
                                         {item.name}
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={`w-5 h-5 transition-transform duration-300 ${activeMobileDropdown === item.name ? 'rotate-180 text-[#E2231A]' : 'text-gray-400'}`}>
@@ -194,14 +209,17 @@ const Navbar = () => {
                                     <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === item.name ? 'max-h-[500px] mb-4 opacity-100' : 'max-h-0 opacity-0'}`}>
                                         <div className="flex flex-col gap-4 pl-4 border-l-2 border-gray-100 ml-2">
                                             {item.dropdown.map((subItem) => (
-                                                <a
+                                                <NavLink
                                                     key={subItem.name}
-                                                    href={subItem.link}
+                                                    to={subItem.link}
                                                     onClick={() => setIsMobileMenuOpen(false)}
-                                                    className="text-[17px] font-semibold text-gray-500 hover:text-[#E2231A]"
+                                                    className={({ isActive: isSubActive }) =>
+                                                        `text-[17px] font-semibold transition-colors ${isSubActive ? 'text-[#2a3a4a]' : 'text-[#2a3a4a]'
+                                                        }`
+                                                    }
                                                 >
                                                     {subItem.name}
-                                                </a>
+                                                </NavLink>
                                             ))}
                                         </div>
                                     </div>
@@ -209,12 +227,9 @@ const Navbar = () => {
                             ) : (
                                 <NavLink
                                     to={item.link}
-                                    end
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className={({ isActive: isLinkActive }) =>
-                                        `block py-5 text-[22px] font-bold transition-colors ${isLinkActive ? 'text-[#E2231A]' : 'text-[#111827] hover:text-[#E2231A]'
-                                        }`
-                                    }
+                                    className={`block py-5 text-[22px] font-bold transition-colors ${location.pathname === item.link ? 'text-[#E2231A]' : 'text-[#111827] hover:text-[#E2231A]'
+                                        }`}
                                 >
                                     {item.name}
                                 </NavLink>
