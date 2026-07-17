@@ -86,7 +86,7 @@ const Navbar = () => {
 
                         {/* Desktop Navigation Links */}
                         <div className='flex justify-between gap-5'>
-                            <div className="hidden lg:flex items-center space-x-2 h-full">
+                            <div className="hidden xl:flex items-center space-x-2 h-full">
                                 {navItems.map((item) => (
                                     <div key={item.name} className="relative flex items-center h-full group cursor-pointer">
                                         <NavLink
@@ -127,7 +127,7 @@ const Navbar = () => {
                             <div className="flex items-center space-x-4 md:space-x-5 z-50">
 
                                 {/* Desktop Contact Details */}
-                                <div className="hidden lg:flex items-center space-x-5">
+                                <div className="hidden xl:flex items-center space-x-5">
                                     <div className={`h-8 w-[1px] transition-colors duration-300 ${isActive ? 'bg-gray-300' : 'bg-white/30'}`}></div>
 
                                     <button className={`w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer ${isActive ? 'bg-gray-100 hover:bg-gray-200 text-gray-700' : 'bg-white/20 hover:bg-white/30 text-white'}`}>
@@ -146,7 +146,7 @@ const Navbar = () => {
                                 {/* Mobile Hamburger Button */}
                                 <button
                                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                    className="lg:hidden w-[45px] h-[45px] rounded-full flex flex-col justify-center items-center gap-[5px] focus:outline-none transition-all duration-300"
+                                    className="xl:hidden w-[45px] h-[45px] rounded-full flex flex-col justify-center items-center gap-[5px] focus:outline-none transition-all duration-300"
                                 >
                                     <span className={`h-[3px] w-6 transition-all duration-300 rounded-full ${isMobileMenuOpen ? 'bg-gray-900 rotate-45 translate-y-[8px]' : (isActive ? 'bg-gray-900' : 'bg-white')}`}></span>
                                     <span className={`h-[3px] w-6 transition-all duration-300 rounded-full ${isMobileMenuOpen ? 'opacity-0' : (isActive ? 'bg-gray-900' : 'bg-white')}`}></span>
@@ -160,7 +160,7 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Menu Background Overlay */}
-            <div className={`fixed top-0 right-0  w-[85%] max-w-[380px] bg-white z-40 transform transition-transform duration-300 ease-in-out lg:hidden shadow-2xl flex flex-col ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            <div className={`fixed top-0 right-0  w-[85%] max-w-[380px] bg-white z-40 transform transition-transform duration-300 ease-in-out xl:hidden shadow-2xl flex flex-col ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}>
 
                 {/* --- ADD THIS NEW CLOSE BUTTON --- */}
