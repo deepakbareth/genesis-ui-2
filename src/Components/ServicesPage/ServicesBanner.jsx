@@ -10,7 +10,7 @@ function ServicesBanner() {
             subtitle="Delivering innovative alternative fuel solutions, electrical services, civil construction, and infrastructure development."
             navLinks={[
                 { name: "Hydrogen", link: "/genesis-ui-2/services/#hydrogen" },
-                { name: "EV Charging", link: "/genesis-ui-2/services/#ev" },
+                { name: "EV Charging", link: "/genesis-ui-2/services/#ev-charging" },
                 { name: "CNG", link: "/genesis-ui-2/services/#cng" },
                 { name: "Civil", link: "#civil" },
                 { name: "Electrical", link: "#electrical" },
