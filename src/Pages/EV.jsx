@@ -4,8 +4,8 @@ import EVThreeGrid from '../Components/EV/EVThreeGrid';
 import EVFoldable from '../Components/EV/EVFoldable';
 import EVSafety from '../Components/EV/EVSafety';
 import EVMatrix from '../Components/EV/EVMatrix';
-import EVWhyGenesis from '../Components/EV/EVWhyGenesis';
-import EVCTA from '../Components/EV/EVCTA';
+import WhyGenesis from '../Components/reusavleComp/WhyGenesis';
+import CTASection from '../Components/reusavleComp/CTASection';
 
 const EVPage = () => {
     // Scroll reset on mount
@@ -20,8 +20,8 @@ const EVPage = () => {
             <EVFoldable />
             <EVSafety />
             <EVMatrix />
-            <EVWhyGenesis />
-            <EVCTA />
+            <WhyGenesis />
+            <CTASection />
         </div>
     );
 };

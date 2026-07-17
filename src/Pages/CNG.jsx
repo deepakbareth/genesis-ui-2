@@ -4,8 +4,8 @@ import CNGThreeGrid from '../Components/CNG/CNGThreeGrid';
 import CNGFoldable from '../Components/CNG/CNGFoldable';
 import CNGSafety from '../Components/CNG/CNGSafety';
 import CNGMatrix from '../Components/CNG/CNGMatrix';
-import CNGWhyGenesis from '../Components/CNG/CNGWhyGenesis';
-import CNGCTA from '../Components/CNG/CNGCTA';
+import WhyGenesis from '../Components/reusavleComp/WhyGenesis';
+import CTASection from '../Components/reusavleComp/CTASection';
 
 const CNGPage = () => {
     // Scroll reset on mount
@@ -20,8 +20,8 @@ const CNGPage = () => {
             <CNGFoldable />
             <CNGSafety />
             <CNGMatrix />
-            <CNGWhyGenesis />
-            <CNGCTA />
+            <WhyGenesis />
+            <CTASection />
         </div>
     );
 };
