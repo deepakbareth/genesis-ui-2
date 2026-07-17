@@ -35,6 +35,13 @@ const Navbar = () => {
         {
             name: 'Services',
             link: '/genesis-ui-2/services',
+            dropdown: [
+                { name: 'Service Overview', link: '/genesis-ui-2/services' },
+                { name: 'Hydrogen Fueling', link: '/genesis-ui-2/services/hydrogen' },
+                { name: 'EV Charging', link: '/genesis-ui-2/services/ev' },
+                { name: 'CNG Fueling', link: '/genesis-ui-2/services/cng' },
+
+            ]
         },
         { name: 'About', link: '/genesis-ui-2/about' },
         { name: 'Contact', link: '/genesis-ui-2/contact' }
@@ -85,11 +92,10 @@ const Navbar = () => {
                                         <NavLink
                                             to={item.link}
                                             end
-                                            className={({ isActive: isLinkActive }) => 
-                                                `flex items-center gap-1.5 px-6 py-2.5 rounded-full transition-all duration-300 ${
-                                                    isLinkActive 
-                                                        ? 'bg-[#E2231A] text-white' 
-                                                        : `${isActive ? 'text-gray-900' : 'text-white'} hover:bg-[#E2231A] hover:text-white`
+                                            className={({ isActive: isLinkActive }) =>
+                                                `flex items-center gap-1.5 px-6 py-2.5 rounded-full transition-all duration-300 ${isLinkActive
+                                                    ? 'bg-[#E2231A] text-white'
+                                                    : `${isActive ? 'text-gray-900' : 'text-white'} hover:bg-[#E2231A] hover:text-white`
                                                 }`
                                             }
                                         >
@@ -107,8 +113,8 @@ const Navbar = () => {
                                         {item.dropdown && (
                                             <div className="absolute top-[80px] left-0 w-64 bg-white rounded-[16px] shadow-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col z-50 border border-gray-100">
                                                 {item.dropdown.map((subItem) => (
-                                                    <a key={subItem} href={`services#${subItem.toLowerCase().replace(/\s+/g, '-')}`} className="px-6 py-3 text-[16px] font-bold text-[#2A3A4A] hover:text-[#E2231A] hover:bg-red-50/50 transition-colors duration-200">
-                                                        {subItem}
+                                                    <a key={subItem.name} href={subItem.link} className="px-6 py-3 text-[16px] font-bold text-[#2A3A4A] hover:text-[#E2231A] hover:bg-red-50/50 transition-colors duration-200">
+                                                        {subItem.name}
                                                     </a>
                                                 ))}
                                             </div>
@@ -189,12 +195,12 @@ const Navbar = () => {
                                         <div className="flex flex-col gap-4 pl-4 border-l-2 border-gray-100 ml-2">
                                             {item.dropdown.map((subItem) => (
                                                 <a
-                                                    key={subItem}
-                                                    href={`#${subItem.toLowerCase().replace(/\s+/g, '-')}`}
+                                                    key={subItem.name}
+                                                    href={subItem.link}
                                                     onClick={() => setIsMobileMenuOpen(false)}
                                                     className="text-[17px] font-semibold text-gray-500 hover:text-[#E2231A]"
                                                 >
-                                                    {subItem}
+                                                    {subItem.name}
                                                 </a>
                                             ))}
                                         </div>
@@ -205,9 +211,8 @@ const Navbar = () => {
                                     to={item.link}
                                     end
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className={({ isActive: isLinkActive }) => 
-                                        `block py-5 text-[22px] font-bold transition-colors ${
-                                            isLinkActive ? 'text-[#E2231A]' : 'text-[#111827] hover:text-[#E2231A]'
+                                    className={({ isActive: isLinkActive }) =>
+                                        `block py-5 text-[22px] font-bold transition-colors ${isLinkActive ? 'text-[#E2231A]' : 'text-[#111827] hover:text-[#E2231A]'
                                         }`
                                     }
                                 >
