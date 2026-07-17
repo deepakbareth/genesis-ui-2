@@ -3,23 +3,23 @@ import React, { useState, useEffect } from 'react';
 const safetySlides = [
     {
         title: "Avetta Safety Prequalified",
-        desc: "Genesis maintains active Avetta credentials, verifying our strict alignment with global supply chain safety, insurance requirements, and contractor prequalification standards.",
+        desc: "Genesis Contracting is an Avetta-prequalified contractor, verifying our compliance with industrial safety, liability, and insurance standards.",
         highlight: "Verified Compliance"
     },
     {
         title: "ISN Member Contractor",
-        desc: "Continuous evaluation and auditing of our safety protocols, training compliance, and field execution logs ensure we meet the extreme demands of alternative fuel developers.",
+        desc: "Genesis is a registered ISN member contractor with audited safety protocols, training records, and performance metrics.",
         highlight: "Audited Quality"
     },
     {
         title: "Certified Swagelok Technicians",
-        desc: "All mechanical technicians hold active certifications in Swagelok tube fitting, high-pressure line bending, and gas mechanical assemblies to ensure zero-leak operations.",
-        highlight: "Zero-Leak Guarantee"
+        desc: "Our technicians hold active certifications in Swagelok high-pressure tube fitting and mechanical gas assemblies to ensure leak-free operations.",
+        highlight: "Certified Technicians"
     },
     {
         title: "NFPA & ASME Code Integration",
-        desc: "Every ground-up installation and upgrade is strictly structured and tested to comply with local NFPA 2 (Hydrogen Technologies) and ASME piping codes.",
-        highlight: "Engineering Rigor"
+        desc: "All mechanical assemblies, installations, and upgrades strictly comply with NFPA 2 (Hydrogen Technologies Code) and ASME piping codes.",
+        highlight: "Code Compliance"
     }
 ];
 
@@ -53,9 +53,8 @@ const HydrogenSafety = () => {
                             <button
                                 key={i}
                                 onClick={() => setCarouselIndex(i)}
-                                className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
-                                    carouselIndex === i ? 'bg-red-700 w-8' : 'bg-white/30 hover:bg-white/50'
-                                }`}
+                                className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${carouselIndex === i ? 'bg-red-700 w-8' : 'bg-white/30 hover:bg-white/50'
+                                    }`}
                             />
                         ))}
                     </div>
@@ -66,17 +65,16 @@ const HydrogenSafety = () => {
                     {safetySlides.map((slide, i) => (
                         <div
                             key={i}
-                            className={`absolute inset-0 w-full h-full flex flex-col md:flex-row items-stretch gap-6 md:gap-12 transition-all duration-700 ease-in-out ${
-                                carouselIndex === i 
-                                    ? 'opacity-100 translate-x-0' 
+                            className={`absolute inset-0 w-full h-full flex flex-col md:flex-row items-stretch gap-6 md:gap-12 transition-all duration-700 ease-in-out ${carouselIndex === i
+                                    ? 'opacity-100 translate-x-0'
                                     : 'opacity-0 translate-x-12 pointer-events-none'
-                            }`}
+                                }`}
                         >
                             <div className="md:w-1/4 flex flex-col justify-center">
                                 <span className="text-[13px] font-semibold text-red-500 font-['Necto_Mono',monospace] uppercase tracking-wider mb-2 block">
                                     {slide.highlight}
                                 </span>
-                                <h3 className="font-['Apfel_Grotezk'] text-[24px] md:text-[28px] font-normal leading-tight">
+                                <h3 className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji','Segoe_UI_Symbol','Noto_Color_Emoji'] text-[24px] md:text-[28px] font-normal leading-tight">
                                     {slide.title}
                                 </h3>
                             </div>

@@ -50,13 +50,13 @@ const HydrogenThreeGrid = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {cardsData.map((card, idx) => (
-                        <div 
-                            key={idx} 
+                        <div
+                            key={idx}
                             className="bg-white border border-gray-200/60 p-8 rounded-sm shadow-sm flex flex-col hover:shadow-md transition-shadow relative overflow-hidden group"
                         >
                             <div className="absolute top-0 left-0 w-full h-[3px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
                             <div className="mb-6">{card.icon}</div>
-                            <h3 className="font-['Apfel_Grotezk'] text-[24px] text-[#2A3A4A] mb-5 font-normal tracking-tight">
+                            <h3 className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji','Segoe_UI_Symbol','Noto_Color_Emoji'] text-[24px] text-[#2A3A4A] mb-5 font-normal tracking-tight">
                                 {card.title}
                             </h3>
                             <ul className="flex flex-col gap-3 mt-auto">

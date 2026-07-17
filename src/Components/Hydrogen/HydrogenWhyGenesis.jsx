@@ -49,7 +49,7 @@ const HydrogenWhyGenesis = () => {
                                 <div className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0">
                                     <CheckCircle2 className="w-5 h-5 text-red-700" />
                                 </div>
-                                <h3 className="font-['Apfel_Grotezk'] text-[20px] md:text-[22px] font-bold text-[#2A3A4A] tracking-tight">
+                                <h3 className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji','Segoe_UI_Symbol','Noto_Color_Emoji'] text-[20px] md:text-[22px] font-semibold text-gray-900 tracking-tight">
                                     {point.title}
                                 </h3>
                             </div>
