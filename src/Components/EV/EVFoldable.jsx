@@ -33,7 +33,7 @@ const servicesData = [
             "Genesis ensures the safety, reliability, and continuous uptime of critical EV charging stations. A primary focus of this support is regular inspections and diagnostics, which serve to optimize charger performance and extend operational longevity.",
             "Key maintenance aspects include inspecting and maintaining charging levels and power output, examining and cleaning charging connectors for proper contact, ensuring the adequacy of power supply to charging stations, maintaining electrical infrastructure, including transformers, switchgear, and cabling, and regularly testing safety features, such as ground-fault protection, overcurrent protection, and electrical isolation."
         ],
-        buttonText: "Learn More",
+        buttonText: "Discuss Maintenance",
         phone: "4194663262",
         maxHeight: "max-h-[1000px]"
     }
@@ -69,10 +69,9 @@ const EVFoldable = () => {
                                     </span>
                                     <ChevronDown className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${isExpanded ? 'rotate-180 text-red-700' : ''}`} />
                                 </button>
-                                <div 
-                                    className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                                        isExpanded ? service.maxHeight : 'max-h-0'
-                                    }`}
+                                <div
+                                    className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? service.maxHeight : 'max-h-0'
+                                        }`}
                                 >
                                     <div className="p-6 md:p-10 border-t border-gray-100 bg-white space-y-6 text-[15px] md:text-[18px] text-gray-600 leading-relaxed font-sans">
                                         {service.paragraphs.map((paragraph, idx) => (
@@ -85,8 +84,8 @@ const EVFoldable = () => {
                                                     {service.quote}
                                                 </div>
                                             )}
-                                            <a 
-                                                href={`tel:${service.phone}`} 
+                                            <a
+                                                href={`tel:${service.phone}`}
                                                 className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-sm font-semibold tracking-wider font-['Necto_Mono',monospace] text-[14px] uppercase flex items-center gap-2"
                                             >
                                                 <span>{service.buttonText}</span>

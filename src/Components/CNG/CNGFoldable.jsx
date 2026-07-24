@@ -34,7 +34,7 @@ const servicesData = [
             "Genesis Contracting Inc. excels in providing comprehensive support for clients through its expertise in maintenance and upgrades of Compressed Natural Gas (CNG) fueling systems. A primary focus of this support is the execution of efficiency projects, which serve to optimize system performance and extend operational longevity. One such efficiency project involves the addition or replacement of CNG compressors and dispensers, a critical component that greatly influences the effectiveness of the fueling infrastructure.",
             "Efficiency projects undertaken by Genesis Contracting Inc. are carefully assessed to identify the most appropriate solutions, striking the ideal balance between performance, reliability, and cost-effectiveness. By placing an emphasis on these projects, the company ensures that clients receive improved fueling rates, reduced operational costs, and extended system lifespans. This approach demonstrates Genesis Contracting Inc.’s commitment to fostering long-term relationships with clients and delivering exceptional value through their CNG fueling infrastructure investments."
         ],
-        buttonText: "Learn More",
+        buttonText: "Discuss Maintenance",
         phone: "4194663262",
         maxHeight: "max-h-[1000px]"
     }
@@ -70,10 +70,9 @@ const CNGFoldable = () => {
                                     </span>
                                     <ChevronDown className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${isExpanded ? 'rotate-180 text-red-700' : ''}`} />
                                 </button>
-                                <div 
-                                    className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                                        isExpanded ? service.maxHeight : 'max-h-0'
-                                    }`}
+                                <div
+                                    className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? service.maxHeight : 'max-h-0'
+                                        }`}
                                 >
                                     <div className="p-6 md:p-10 border-t border-gray-100 bg-white space-y-6 text-[15px] md:text-[18px] text-gray-600 leading-relaxed font-sans">
                                         {service.paragraphs.map((paragraph, idx) => (
@@ -86,8 +85,8 @@ const CNGFoldable = () => {
                                                     {service.quote}
                                                 </div>
                                             )}
-                                            <a 
-                                                href={`tel:${service.phone}`} 
+                                            <a
+                                                href={`tel:${service.phone}`}
                                                 className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-sm font-semibold tracking-wider font-['Necto_Mono',monospace] text-[14px] uppercase flex items-center gap-2"
                                             >
                                                 <span>{service.buttonText}</span>

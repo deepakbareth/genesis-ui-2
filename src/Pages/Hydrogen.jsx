@@ -77,7 +77,7 @@ const hydrogenServicesData = [
             "Because high-pressure hydrogen environments leave zero margin for error, minor failures quickly cascade into costly downtime. Genesis stabilizes station performance by troubleshooting control panels and skids, repairing compression fittings, airlines, valves, VJ line seals, hydrogen pad lights, and cryogenic line flashing, while replacing high-wear components like cryogenic pump heads.",
             "With deep field experience spanning high-pressure tubing, fueling skids, dispensers, and safety-critical controls, Genesis restores system integrity and extends equipment life, giving operators the certainty they need to scale with confidence."
         ],
-        buttonText: "Learn More",
+        buttonText: "Discuss Maintenance",
         phone: "4194663262",
         maxHeight: "max-h-[1000px]"
     }

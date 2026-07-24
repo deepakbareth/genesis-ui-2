@@ -75,7 +75,7 @@ const evServicesData = [
             "Genesis ensures the safety, reliability, and continuous uptime of critical EV charging stations. A primary focus of this support is regular inspections and diagnostics, which serve to optimize charger performance and extend operational longevity.",
             "Key maintenance aspects include inspecting and maintaining charging levels and power output, examining and cleaning charging connectors for proper contact, ensuring the adequacy of power supply to charging stations, maintaining electrical infrastructure, including transformers, switchgear, and cabling, and regularly testing safety features, such as ground-fault protection, overcurrent protection, and electrical isolation."
         ],
-        buttonText: "Learn More",
+        buttonText: "Discuss Maintenance",
         phone: "4194663262",
         maxHeight: "max-h-[1000px]"
     }

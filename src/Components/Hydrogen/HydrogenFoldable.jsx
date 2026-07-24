@@ -35,7 +35,7 @@ const servicesData = [
             "Because high-pressure hydrogen environments leave zero margin for error, minor failures quickly cascade into costly downtime. Genesis stabilizes station performance by troubleshooting control panels and skids, repairing compression fittings, airlines, valves, VJ line seals, hydrogen pad lights, and cryogenic line flashing, while replacing high-wear components like cryogenic pump heads.",
             "With deep field experience spanning high-pressure tubing, fueling skids, dispensers, and safety-critical controls, Genesis restores system integrity and extends equipment life, giving operators the certainty they need to scale with confidence."
         ],
-        buttonText: "Learn More",
+        buttonText: "Discuss Maintenance",
         phone: "4194663262",
         maxHeight: "max-h-[1000px]"
     }
@@ -71,10 +71,9 @@ const HydrogenFoldable = () => {
                                     </span>
                                     <ChevronDown className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${isExpanded ? 'rotate-180 text-red-700' : ''}`} />
                                 </button>
-                                <div 
-                                    className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                                        isExpanded ? service.maxHeight : 'max-h-0'
-                                    }`}
+                                <div
+                                    className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? service.maxHeight : 'max-h-0'
+                                        }`}
                                 >
                                     <div className="p-6 md:p-10 border-t border-gray-100 bg-white space-y-6 text-[15px] md:text-[18px] text-gray-600 leading-relaxed font-sans">
                                         {service.paragraphs.map((paragraph, idx) => (
@@ -87,8 +86,8 @@ const HydrogenFoldable = () => {
                                                     {service.quote}
                                                 </div>
                                             )}
-                                            <a 
-                                                href={`tel:${service.phone}`} 
+                                            <a
+                                                href={`tel:${service.phone}`}
                                                 className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-sm font-semibold tracking-wider font-['Necto_Mono',monospace] text-[14px] uppercase flex items-center gap-2"
                                             >
                                                 <span>{service.buttonText}</span>

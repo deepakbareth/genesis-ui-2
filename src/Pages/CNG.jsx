@@ -76,7 +76,7 @@ const cngServicesData = [
             "Genesis Contracting Inc. excels in providing comprehensive support for clients through its expertise in maintenance and upgrades of Compressed Natural Gas (CNG) fueling systems. A primary focus of this support is the execution of efficiency projects, which serve to optimize system performance and extend operational longevity. One such efficiency project involves the addition or replacement of CNG compressors and dispensers, a critical component that greatly influences the effectiveness of the fueling infrastructure.",
             "Efficiency projects undertaken by Genesis Contracting Inc. are carefully assessed to identify the most appropriate solutions, striking the ideal balance between performance, reliability, and cost-effectiveness. By placing an emphasis on these projects, the company ensures that clients receive improved fueling rates, reduced operational costs, and extended system lifespans. This approach demonstrates Genesis Contracting Inc.’s commitment to fostering long-term relationships with clients and delivering exceptional value through their CNG fueling infrastructure investments."
         ],
-        buttonText: "Learn More",
+        buttonText: "Discuss Maintenance",
         phone: "4194663262",
         maxHeight: "max-h-[1000px]"
     }
