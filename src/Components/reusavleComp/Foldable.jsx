@@ -37,23 +37,112 @@ const Foldable = ({ subtitle, title, servicesData }) => {
                                     }`}
                                 >
                                     <div className="p-6 md:p-10 border-t border-gray-100 bg-white space-y-6 text-[15px] md:text-[18px] text-gray-600 leading-relaxed font-sans">
-                                        {service.paragraphs.map((paragraph, idx) => (
-                                            <p key={idx}>{paragraph}</p>
-                                        ))}
+                                        {service.paragraphs.map((item, idx) => {
+                                            if (typeof item === 'string') {
+                                                return <p key={idx}>{item}</p>;
+                                            }
+                                            if (item && typeof item === 'object') {
+                                                switch (item.type) {
+                                                    case 'heading':
+                                                        return (
+                                                            <h4 key={idx} className="font-['Apfel_Grotezk',ui-sans-serif,system-ui,sans-serif] text-[22px] md:text-[28px] font-normal text-[#2A3A4A] mt-6 first:mt-0 mb-3">
+                                                                {item.text}
+                                                            </h4>
+                                                        );
+                                                    case 'subheading':
+                                                        return (
+                                                            <h5 key={idx} className="font-semibold text-[16px] md:text-[18px] text-[#2A3A4A] mt-4 mb-2">
+                                                                {item.text}
+                                                            </h5>
+                                                        );
+                                                    case 'goal':
+                                                        return (
+                                                            <p key={idx} className="text-[15px] md:text-[18px] text-[#2A3A4A]">
+                                                                <strong className="font-bold">{item.bold}</strong>{' '}
+                                                                <span className="italic text-gray-500">{item.italic}</span>
+                                                            </p>
+                                                        );
+                                                    case 'list':
+                                                        return (
+                                                            <ul key={idx} className="list-disc pl-6 space-y-3 my-4">
+                                                                {item.items.map((listItem, lIdx) => {
+                                                                    if (typeof listItem === 'object') {
+                                                                        return (
+                                                                            <li key={lIdx} className="text-[15px] md:text-[18px] text-gray-600 leading-relaxed">
+                                                                                <strong className="text-[#2A3A4A] font-semibold">{listItem.bold}</strong> {listItem.text}
+                                                                            </li>
+                                                                        );
+                                                                    }
+                                                                    return (
+                                                                        <li key={lIdx} className="text-[15px] md:text-[18px] text-gray-600 leading-relaxed">
+                                                                            {listItem}
+                                                                        </li>
+                                                                    );
+                                                                })}
+                                                            </ul>
+                                                        );
+                                                    case 'table':
+                                                        return (
+                                                            <div key={idx} className="overflow-x-auto my-6 border border-gray-200 rounded-sm">
+                                                                <table className="w-full min-w-[650px] text-left border-collapse">
+                                                                    <thead>
+                                                                        <tr className="bg-gray-50 border-b border-gray-200">
+                                                                            {item.headers.map((header, hIdx) => (
+                                                                                <th key={hIdx} className="p-4 font-semibold text-[#2A3A4A] text-[15px] md:text-[17px] w-1/2">
+                                                                                    {header}
+                                                                                </th>
+                                                                            ))}
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        {item.rows.map((row, rIdx) => (
+                                                                            <tr key={rIdx} className="border-b border-gray-100 last:border-b-0 hover:bg-gray-50/40">
+                                                                                {row.map((cell, cIdx) => (
+                                                                                    <td key={cIdx} className="p-4 text-[14px] md:text-[16px] text-gray-600 leading-relaxed align-top">
+                                                                                        {typeof cell === 'object' ? (
+                                                                                            <span>
+                                                                                                <strong className="text-[#2A3A4A] font-semibold">{cell.bold}</strong> {cell.text}
+                                                                                            </span>
+                                                                                        ) : (
+                                                                                            cell
+                                                                                        )}
+                                                                                    </td>
+                                                                                ))}
+                                                                            </tr>
+                                                                        ))}
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        );
+                                                    default:
+                                                        return null;
+                                                }
+                                            }
+                                            return null;
+                                        })}
 
-                                        <div className={`pt-4 border-t border-gray-100 flex flex-col md:flex-row gap-6 ${service.quote ? 'justify-between items-start md:items-center' : 'justify-end'}`}>
+                                        <div className="pt-6 border-t border-gray-100 flex flex-col gap-4">
                                             {service.quote && (
-                                                <div className="italic text-[#2A3A4A] font-semibold text-[16px] md:text-[18px]">
+                                                <div className="italic text-[#2A3A4A] font-semibold text-[16px] md:text-[18px] mb-1">
                                                     {service.quote}
                                                 </div>
                                             )}
-                                            <a 
-                                                href={`tel:${service.phone}`} 
-                                                className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-sm font-semibold tracking-wider font-['Necto_Mono',monospace] text-[14px] uppercase flex items-center gap-2"
-                                            >
-                                                <span>{service.buttonText}</span>
-                                                <ArrowRight className="w-4 h-4" />
-                                            </a>
+                                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                                                {service.ctaPrompt ? (
+                                                    <div className="font-semibold text-[15px] md:text-[18px] text-[#2C3E50]">
+                                                        {service.ctaPrompt}
+                                                    </div>
+                                                ) : (
+                                                    <div />
+                                                )}
+                                                <a 
+                                                    href={`tel:${service.phone}`} 
+                                                    className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-sm font-semibold tracking-wider font-['Necto_Mono',monospace] text-[14px] uppercase flex items-center gap-2 shrink-0 cursor-pointer"
+                                                >
+                                                    <span>{service.buttonText}</span>
+                                                    <ArrowRight className="w-4 h-4" />
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

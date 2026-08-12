@@ -48,37 +48,179 @@ const cngServicesData = [
         id: 'construction',
         title: 'Construction',
         paragraphs: [
-            "Genesis CNG Fuel System Contractor is a leading expert in the design, installation, and construction of Compressed Natural Gas (CNG) fueling stations. With extensive experience in engineering design for fuel distribution systems and associated infrastructure, our team is equipped to handle jobsite management, from obtaining local permits to conducting thorough inspections at every development phase.",
-            "Our comprehensive services include excavation, grading, foundation work, and installation of electrical and mechanical underground systems, as well as grounding and supporting concrete structures.",
-            "Partnering with strategic suppliers, we ensure the procurement of essential materials and equipment for the proficient installation of CNG fueling systems. Our capabilities extend to specialized system installations, efficient demolition and disposal of existing structures, and implementing high-volume fueling systems for demanding applications. Genesis CNG Fuel System Contractor is your one-stop solution for establishing fueling stations for disposal trucks, buses, and other vehicles.",
-            "Our expertise in piping installation, general contracting, and CNG equipment installation ensures seamless integration and optimal performance for your fueling station. Trust Genesis CNG to deliver unparalleled service and expertise for all your CNG fueling needs."
+            {
+                type: 'heading',
+                text: 'High-Pressure CNG Station Construction Built for Zero-Defect Execution'
+            },
+            "High-pressure gas infrastructure demands absolute mechanical and electrical precision—not a web of uncoordinated subcontractors. Genesis Contracting provides end-to-end, self-performed construction for CNG stations, managing civil ground prep, stainless steel pressure piping, and utility-scale switchgear with experienced in-house specialists.",
+            "Whether you are developing a public fast-fill site or a private fleet time-fill depot, we build reliable natural gas infrastructure from ground prep to final startup. We seamlessly install, integrate, and commission equipment from top-tier industry manufacturers, including ANGI Energy Systems, Clean Energy, and Chart Industries. Our field crews handle every component: diaphragm compressors, high-pressure cascade storage vessels, gas chillers, PLC control panels, and dispensers.",
+            {
+                type: 'heading',
+                text: 'End-to-End Lifecycle Execution'
+            },
+            "Our teams manage the entire project continuum, eliminating performance gaps between design, civil work, equipment installation, and commissioning:",
+            {
+                type: 'list',
+                items: [
+                    {
+                        bold: "Planning, Permitting & Utility Coordination:",
+                        text: "Fast-tracked AHJ approvals, local gas utility tie-in coordination, and full compliance with NFPA 52 codes."
+                    },
+                    {
+                        bold: "Civil & Structural:",
+                        text: "Heavy-duty, reinforced concrete pads engineered specifically for high-vibration compressor skids, cascade storage foundations, and canopy placement."
+                    },
+                    {
+                        bold: "MEP & Mechanical:",
+                        text: "Precision installation of gas dryers, chillers, priority control panels, and high-pressure 316/316L stainless steel tubing."
+                    },
+                    {
+                        bold: "Electrical, Controls & ESD Systems:",
+                        text: "Class I, Div 2 hazardous location wiring, Motor Control Centers (MCCs), PLC, and certified Emergency Shutdown (ESD) interlocks."
+                    },
+                    {
+                        bold: "Testing & Commissioning:",
+                        text: "Pneumatic/hydrostatic pressure testing, helium leak checks, control sequence verification, and rapid final closeout."
+                    }
+                ]
+            },
+            {
+                type: 'heading',
+                text: 'High-Pressure Technical Expertise'
+            },
+            "With high-pressure gas infrastructure, system integrity is non-negotiable. Our field crews bring the specialized craft discipline required for heavy-duty commercial and municipal fleet operations:",
+            {
+                type: 'list',
+                items: [
+                    {
+                        bold: "3,600 PSI Infrastructure Mastery:",
+                        text: "Hands-on experience with high-pressure reciprocating compressors, multi-bank cascade storage systems, and fast-fill dispensers."
+                    },
+                    {
+                        bold: "Precision Assembly:",
+                        text: "Expert Swagelok, compression, and cone-and-thread fitting practices engineered to withstand continuous vibration and thermal cycling without leaks."
+                    },
+                    {
+                        bold: "OEM Integration:",
+                        text: "Seamless installation, retrofit, and service work across leading equipment manufacturers, including ANGI Energy Systems, Ariel Corporation, Bauer Compressors, and IMW."
+                    }
+                ]
+            },
+            {
+                type: 'heading',
+                text: 'The Advantage for Owners & Fleet Operators'
+            },
+            {
+                type: 'goal',
+                bold: "We reduce construction risk, simplify multi-trade coordination, and deliver total schedule certainty.",
+                italic: ""
+            },
+            "Whether you are building a public fast-fill retail station, constructing a dedicated time-fill depot for transit fleets, or expanding existing compressor capacity, we provide the field leadership, certified execution, and project discipline your infrastructure demands."
         ],
-        quote: "— John Lang, President",
-        buttonText: "Schedule a 15-Minute Project Review",
+        quote: "— James Gordon, CFO",
+        ctaPrompt: "👉 Let’s discuss your upcoming CNG station build or expansion project.",
+        buttonText: "Discuss Project Details",
         phone: "4194663262",
-        maxHeight: "max-h-[1500px]"
+        maxHeight: "max-h-[3000px]"
     },
     {
         id: 'upgrades',
         title: 'Upgrades',
         paragraphs: [
-            "Genesis helps CNG fueling operators scale infrastructure. As fleet demand grows, station owners need more capacity, faster throughput, and stronger system reliability from assets already in the ground. Genesis supports that growth through strategic natural gas station upgrades, including compressor additions, dispenser replacements, and safety valve modernizations.",
-            "With deep field experience in high-pressure natural gas environments, Genesis coordinates upgrade work around live operational needs, equipment vendors, safety requirements, and commissioning timelines. The result is a smarter path to expansion: greater fueling capacity, improved station performance, and reduced downtime without the disruption of a full rebuild."
+            {
+                type: 'heading',
+                text: 'Scale capacity and throughput to support growing alternative fuel fleets'
+            },
+            {
+                type: 'goal',
+                bold: "Goal: Scale throughput and eliminate fleet bottlenecks without halting daily fuel delivery.",
+                italic: ""
+            },
+            "When growing fleet schedules outpace legacy station capacity, adding throughput requires surgical execution. At Genesis Contracting, we execute phased retrofits and site expansions that keep your vehicles fueling continuously while construction is underway.",
+            {
+                type: 'heading',
+                text: 'How We Expand Your Fueling Capabilities:'
+            },
+            {
+                type: 'list',
+                items: [
+                    {
+                        bold: "Compression & Storage:",
+                        text: "High-flow compressor additions and multi-bank cascade storage expansions."
+                    },
+                    {
+                        bold: "Fueling Velocity:",
+                        text: "Priority panel retrofits, pre-cooling gas chillers, and additional fast-fill dispensers."
+                    },
+                    {
+                        bold: "System Intelligence:",
+                        text: "PLC panel upgrades for optimized gas management."
+                    }
+                ]
+            },
+            "Because our own certified technicians tackle the sitework, high-pressure gas lines, and electrical connections from start to finish, you get a smoother build with zero handoff delays."
         ],
-        buttonText: "Discuss Project Details",
+        ctaPrompt: "👉 Ready to expand your fueling capacity?",
+        buttonText: "Schedule an Upgrade Assessment",
         phone: "4194663262",
-        maxHeight: "max-h-[1000px]"
+        maxHeight: "max-h-[1500px]"
     },
     {
         id: 'maintenance',
         title: 'Maintenance',
         paragraphs: [
-            "Genesis Contracting Inc. excels in providing comprehensive support for clients through its expertise in maintenance and upgrades of Compressed Natural Gas (CNG) fueling systems. A primary focus of this support is the execution of efficiency projects, which serve to optimize system performance and extend operational longevity. One such efficiency project involves the addition or replacement of CNG compressors and dispensers, a critical component that greatly influences the effectiveness of the fueling infrastructure.",
-            "Efficiency projects undertaken by Genesis Contracting Inc. are carefully assessed to identify the most appropriate solutions, striking the ideal balance between performance, reliability, and cost-effectiveness. By placing an emphasis on these projects, the company ensures that clients receive improved fueling rates, reduced operational costs, and extended system lifespans. This approach demonstrates Genesis Contracting Inc.’s commitment to fostering long-term relationships with clients and delivering exceptional value through their CNG fueling infrastructure investments."
+            {
+                type: 'heading',
+                text: 'Preventive Maintenance & Rapid Field Support'
+            },
+            {
+                type: 'goal',
+                bold: "Preventive Maintenance & Rapid Field Support",
+                italic: "Unplanned downtime is preventable. We keep your high-pressure CNG assets operating at peak performance."
+            },
+            "A tripped skid control panel or a weeping compression fitting can ground your fleet in minutes. Genesis Contracting delivers structured maintenance programs and mobile field support designed to troubleshoot complex skids and protect your equipment investment.",
+            {
+                type: 'table',
+                headers: ["Operational Risk", "The Genesis CNG Solution"],
+                rows: [
+                    [
+                        {
+                            bold: "Control Panel Faults & System Trips:",
+                            text: "Panel error codes, logic faults, or sensor failures unexpectedly shutting down compression skids."
+                        },
+                        {
+                            bold: "Skid & Panel Diagnostics:",
+                            text: "Expert troubleshooting for PLC control panels, and skid instrumentation to clear fault codes and prevent unexpected system trips."
+                        }
+                    ],
+                    [
+                        {
+                            bold: "Piping & Valve Leaks:",
+                            text: "Worn compression fittings, leaking pneumatic airlines, or weeping safety relief valves (PRVs) causing pressure drops."
+                        },
+                        {
+                            bold: "Mechanical & Valve Servicing:",
+                            text: "Routine inspection and rebuilds for compression fittings, pneumatic airlines, check valves, and high-pressure safety relief valves (PRVs)."
+                        }
+                    ],
+                    [
+                        {
+                            bold: "Unbudgeted Emergency Outages:",
+                            text: "Sudden failure of high-wear components like valve seals or pneumatic actuators triggering costly site shutdowns."
+                        },
+                        {
+                            bold: "Targeted Component Replacement:",
+                            text: "Proactive swap-outs of high-wear items—seals, valve cartridges, and pneumatic actuators—before they trigger emergency shutdowns."
+                        }
+                    ]
+                ]
+            },
+            "By replacing single-trade subcontractors with one fully certified, single-source partner, you eliminate trade gaps and keep site maintenance costs predictable."
         ],
-        buttonText: "Discuss Maintenance",
+        ctaPrompt: "👉 Eliminate station downtime risk.",
+        buttonText: "Request a Custom Maintenance Proposal",
         phone: "4194663262",
-        maxHeight: "max-h-[1000px]"
+        maxHeight: "max-h-[2000px]"
     }
 ];
 
